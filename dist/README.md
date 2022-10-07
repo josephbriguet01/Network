@@ -1,9 +1,9 @@
 ﻿Copyright © JasonPercus Systems, Inc - All Rights Reserved
 # **Introduction**
 
-Cette librairie apporte une multitude de fonctions utiles permettant de manipuler les adresses IP. À savoir qu'elle possède un dépendance vers le projet :
+Cette librairie apporte une multitude de fonctions utiles permettant de manipuler les adresses IP. À savoir qu'elle possède une dépendance vers le projet :
 
-- [Util-1.15.0](https://github.com/josephbriguet01/Util) (attention ce projet possède lui aussi des dépendances)
+- [Util-1.15.1](https://github.com/josephbriguet01/Util) (attention ce projet possède lui aussi des dépendances)
 
 # **Network**
 Ce projet permet de récupérer le nom des cartes réseaux, le nom des interfaces, l'adresse MAC, les IP...
