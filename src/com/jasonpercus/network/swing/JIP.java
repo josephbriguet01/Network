@@ -625,12 +625,21 @@ public class JIP extends javax.swing.JPanel {
             bloc3.setEnabled(enabled);
         if(bloc4 != null)
             bloc4.setEnabled(enabled);
-        if(point1 != null)
-            point1.setEnabled(enabled);
-        if(point2 != null)
-            point2.setEnabled(enabled);
-        if(point3 != null)
-            point3.setEnabled(enabled);
+        if(point1 != null){
+            point1.setForeground((enabled) ? getForeground() : getDisabledTextColor());
+            point1.setBackground((enabled) ? new java.awt.Color(255, 255, 255) : new java.awt.Color(240, 240, 240));
+            point1.repaint();
+        }
+        if(point2 != null){
+            point2.setForeground((enabled) ? getForeground() : getDisabledTextColor());
+            point2.setBackground((enabled) ? new java.awt.Color(255, 255, 255) : new java.awt.Color(240, 240, 240));
+            point2.repaint();
+        }
+        if(point3 != null){
+            point3.setForeground((enabled) ? getForeground() : getDisabledTextColor());
+            point3.setBackground((enabled) ? new java.awt.Color(255, 255, 255) : new java.awt.Color(240, 240, 240));
+            point3.repaint();
+        }
     }
     
     /**
