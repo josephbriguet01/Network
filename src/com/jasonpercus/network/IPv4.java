@@ -337,6 +337,15 @@ public class IPv4 extends Number implements Comparable<IPv4>, Cloneable, CharSeq
     public static IPv4 getMainLocalIPv4(){
         Network n = new Network();
         java.util.List<NetworkCard> lnc = n.getHardwareList();
+        String[] wordsToTest = new String[]{"WMware", "Virtual Ethernet Adapter", "WMnet"};
+        java.util.Collections.sort(lnc, (NetworkCard o1, NetworkCard o2) -> {
+            if(containsWords(o1, wordsToTest) && !containsWords(o2, wordsToTest))
+                return 1;
+            else if(!containsWords(o1, wordsToTest) && containsWords(o2, wordsToTest))
+                return -1;
+            else
+                return 0;
+        });
         for(int i=0;i<lnc.size();i++){
             NetworkCard nc = lnc.get(i);
             if(nc.isUp() && !nc.isLoopback() && nc.getIpCards() != null && !nc.getIpCards().isEmpty()){
@@ -354,6 +363,21 @@ public class IPv4 extends Number implements Comparable<IPv4>, Cloneable, CharSeq
     
     
     // <editor-fold defaultstate="collapsed" desc="METHODE PRIVATE">
+    /**
+     * Détermine si une carte réseau possède dans son nom certains mots (la casse n'est pas prise en compte)
+     * @param nc Correspond à la carte réseau à tester
+     * @param words Correspond aux mots à rechercher
+     * @return Retourne true, s'il existe au minimum un mot, sinon false
+     */
+    private static boolean containsWords(NetworkCard nc, String[] words){
+        for(String word : words){
+            if(nc.getNameCard().contains(word) || nc.getNameCard().toUpperCase().contains(word.toUpperCase())){
+                return true;
+            }
+        }
+        return false;
+    }
+    
     /**
      * Vérifie le format de l'adresse IP.
      * @param ipv4 Correspond à l'adresse ip à tester
