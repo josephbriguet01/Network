@@ -337,7 +337,7 @@ public class IPv4 extends Number implements Comparable<IPv4>, Cloneable, CharSeq
     public static IPv4 getMainLocalIPv4(){
         Network n = new Network();
         java.util.List<NetworkCard> lnc = n.getHardwareList();
-        String[] wordsToTest = new String[]{"WMware", "Virtual Ethernet Adapter", "WMnet"};
+        String[] wordsToTest = new String[]{"WMware", "Virtual Ethernet Adapter", "WMnet", "VirtualBox", "Host-Only Ethernet Adapter"};
         java.util.Collections.sort(lnc, (NetworkCard o1, NetworkCard o2) -> {
             if(containsWords(o1, wordsToTest) && !containsWords(o2, wordsToTest))
                 return 1;
