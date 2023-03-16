@@ -827,6 +827,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized final void addContainerListener(java.awt.event.ContainerListener listener){
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -837,6 +838,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized final void removeContainerListener(java.awt.event.ContainerListener listener){
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -847,6 +849,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized java.awt.event.ContainerListener[] getContainerListeners() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -894,6 +897,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized void addInputMethodListener(java.awt.event.InputMethodListener listener) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -904,6 +908,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized void removeInputMethodListener(java.awt.event.InputMethodListener listener) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
@@ -914,6 +919,7 @@ public class JIP extends javax.swing.JPanel {
      * @deprecated <div style="color: #D45B5B; font-style: italic">NE PAS UTILISER</div>
      */
     @Override
+    @Deprecated
     public synchronized java.awt.event.InputMethodListener[] getInputMethodListeners() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
